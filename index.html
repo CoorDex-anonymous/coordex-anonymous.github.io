@@ -159,6 +159,16 @@
     @media(max-width:640px){.vgrid-2,.vgrid-3,.vgrid-4{grid-template-columns:1fr;}}
     .vcard{display:flex;flex-direction:column;}
     .vlabel{margin-top:.65rem;text-align:center;font-weight:650;font-size:1.02rem;}
+
+    /* equal-height row: each video keeps its own aspect ratio at a shared height */
+    .row-equalh{display:flex;gap:1.2rem;justify-content:center;align-items:flex-start;flex-wrap:wrap;}
+    .row-equalh .vcard{align-items:center;}
+    .media-frame.fixedh{display:inline-block;line-height:0;}
+    .media-frame.fixedh video{height:250px;width:auto;max-width:100%;}
+    @media(max-width:768px){
+      .row-equalh .vcard{flex:1 1 100%;}
+      .media-frame.fixedh video{height:auto;width:100%;}
+    }
     .vsub{display:block;font-weight:500;color:var(--muted);font-size:.84rem;margin-top:.1rem;}
 
     /* pills / badges */
@@ -172,7 +182,6 @@
 
     /* emphasis / de-emphasis */
     .vcard.ours .media-frame{box-shadow:0 0 0 3px var(--accent),0 10px 30px rgba(37,99,235,.28);}
-    .portrait-wrap{max-width:330px;margin:1.6rem auto 0;}
 
     .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.08),transparent);
       max-width:1180px;margin:0 auto;}
@@ -285,16 +294,15 @@
     <div class="container is-max-wide">
       <div class="has-text-centered">
         <h2 class="title is-3 section-title">Real-world demos</h2>
-        <p class="section-lead">A Unitree G1 humanoid with a 7-DoF Dex3-1 dexterous hand, performing each task continuously without stopping.</p>
+        <p class="section-lead">A Unitree G1 humanoid with a 7-DoF Dex3-1 dexterous hand.</p>
         <div style="margin-top:1rem;">
           <span class="pill pill-realtime"><i class="fas fa-stopwatch"></i>&nbsp;Played at real-time speed (1&times;)</span>
         </div>
       </div>
 
-      <!-- Two emphasized landscape tasks -->
-      <div class="vgrid vgrid-2" style="margin-top:2rem;">
+      <div class="row-equalh" style="margin-top:2rem;">
         <div class="vcard">
-          <div class="media-frame">
+          <div class="media-frame fixedh">
             <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/WalkGrab_real.mp4" type="video/mp4">
             </video>
@@ -302,24 +310,20 @@
           <div class="vlabel">WalkGrab</div>
         </div>
         <div class="vcard">
-          <div class="media-frame">
-            <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/WalkPickTurn_real.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="vlabel">WalkPickTurn</div>
-        </div>
-      </div>
-
-      <!-- De-emphasized portrait task -->
-      <div class="portrait-wrap">
-        <div class="vcard">
-          <div class="media-frame">
+          <div class="media-frame fixedh">
             <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/fridge_real.mp4" type="video/mp4">
             </video>
           </div>
           <div class="vlabel">OpenFridge</div>
+        </div>
+        <div class="vcard">
+          <div class="media-frame fixedh">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/WalkPickTurn_real.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">WalkPickTurn</div>
         </div>
       </div>
     </div>
@@ -332,7 +336,7 @@
     <div class="container is-max-wide">
       <div class="has-text-centered">
         <h2 class="title is-3 section-title">Simulation</h2>
-        <p class="section-lead">A Unitree G1 humanoid with a 20-DoF Wuji dexterous hand.</p>
+        <p class="section-lead">A Unitree G1 humanoid with a 20-DoF Wuji dexterous hand, trained in Isaac Lab.</p>
       </div>
 
       <!-- Successful rollouts -->
@@ -398,7 +402,7 @@
     <div class="container is-max-wide">
       <div class="has-text-centered">
         <h2 class="title is-3 section-title">Action-Space Comparison on WalkGrab</h2>
-        <p class="section-lead">Under the same reward budget, only the coordinated latent-residual interface learns the contact-rich walk-grasp task.</p>
+        <p class="section-lead">Under the same RL environment setting, only our Coordinated Latent Residual Policy learns the continuous contact-rich walk-grasp-carry task.</p>
       </div>
       <div class="vgrid vgrid-4" style="margin-top:1.8rem;">
         <div class="vcard ours">
@@ -409,7 +413,7 @@
           </div>
           <div class="vlabel">
             <span class="pill pill-ours"><i class="fas fa-star"></i>&nbsp;Ours</span>
-            <span class="vsub">Coordinated Latent Residual</span>
+            <span class="vsub">Coordinated Latent Residual Policy</span>
           </div>
         </div>
         <div class="vcard">
