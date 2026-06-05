@@ -147,8 +147,6 @@
     .fig-caption b{color:var(--ink);}
 
     /* section headings */
-    .section-kicker{text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;
-      font-weight:700;color:var(--accent);margin-bottom:.45rem;}
     .section-title{font-weight:800;letter-spacing:-.01em;}
     .section-lead{color:var(--muted);max-width:760px;margin:.5rem auto 0;}
 
@@ -199,38 +197,52 @@
             <div class="is-size-5 publication-authors">
               <span class="author-block">Anonymous Author(s)</span>
             </div>
+
+            <div class="column has-text-centered" style="margin-top:1.2rem;">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://coordex-anonymous.github.io"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper (Coming soon)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://coordex-anonymous.github.io"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv (Coming soon)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://coordex-anonymous.github.io"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code (Coming soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Teaser image -->
-  <section class="hero">
-    <div class="container is-max-wide">
-      <div class="hero-body">
-        <div class="media-frame">
-          <img src="static/images/CoorDex_teaser_v1.png" alt="CoorDex performing dexterous loco-manipulation tasks">
-        </div>
-        <p class="fig-caption">
-          <b>Dexterous loco-manipulation on the move.</b> CoorDex enables a humanoid equipped with high-DoF dexterous hands to perform continuous loco-manipulation tasks, including walk-grasp-carry, opening a fridge while stepping back, and walk-pick-turn.
-        </p>
-      </div>
-    </div>
-  </section>
-
   <!-- Overview video -->
   <section class="hero">
-    <div class="container is-max-wide">
-      <div class="hero-body" style="padding-top:0;">
-        <div class="media-frame">
-          <video id="overview-video" autoplay controls muted loop playsinline preload="metadata">
-            <source src="static/videos/CoorDex_video_anonymous_6M.mp4" type="video/mp4">
-          </video>
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div style="max-width:760px;margin:0 auto;">
+          <div class="media-frame">
+            <video id="overview-video" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/CoorDex_video_anonymous_6M.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="fig-caption">
+            <b>Dexterous loco-manipulation on the move.</b> CoorDex enables a humanoid equipped with high-DoF dexterous hands to perform continuous loco-manipulation tasks, including walk-grasp-carry, opening a fridge while stepping back, and walk-pick-turn.
+          </p>
         </div>
-        <p class="fig-caption has-text-centered" style="text-align:center;">
-          Overview video &mdash; unmute for audio.
-        </p>
       </div>
     </div>
   </section>
@@ -255,10 +267,9 @@
   <section class="section">
     <div class="container is-max-wide">
       <div class="has-text-centered">
-        <p class="section-kicker">Method</p>
-        <h2 class="title is-3 section-title">How CoorDex Works</h2>
+        <h2 class="title is-3 section-title">Method</h2>
       </div>
-      <div class="media-frame" style="background:#fff;margin-top:1.6rem;box-shadow:0 10px 34px rgba(16,24,40,.10);">
+      <div class="media-frame" style="background:#fff;margin:1.6rem auto 0;max-width:900px;box-shadow:0 10px 34px rgba(16,24,40,.10);">
         <img src="static/images/Method_final.svg" alt="Overview of the CoorDex pipeline">
       </div>
       <p class="fig-caption">
@@ -273,9 +284,8 @@
   <section class="section">
     <div class="container is-max-wide">
       <div class="has-text-centered">
-        <p class="section-kicker">Real-World Deployment</p>
-        <h2 class="title is-3 section-title">Dexterous Loco-Manipulation on Hardware</h2>
-        <p class="section-lead">A Unitree G1 humanoid with 20-DoF Wuji dexterous hands, performing each task continuously without stopping.</p>
+        <h2 class="title is-3 section-title">Real-world demos</h2>
+        <p class="section-lead">A Unitree G1 humanoid with a 7-DoF Dex3-1 dexterous hand, performing each task continuously without stopping.</p>
         <div style="margin-top:1rem;">
           <span class="pill pill-realtime"><i class="fas fa-stopwatch"></i>&nbsp;Played at real-time speed (1&times;)</span>
         </div>
@@ -321,8 +331,8 @@
   <section class="section">
     <div class="container is-max-wide">
       <div class="has-text-centered">
-        <p class="section-kicker">Simulation</p>
-        <h2 class="title is-3 section-title">Learned Skills in Simulation</h2>
+        <h2 class="title is-3 section-title">Simulation</h2>
+        <p class="section-lead">A Unitree G1 humanoid with a 20-DoF Wuji dexterous hand.</p>
       </div>
 
       <!-- Successful rollouts -->
@@ -387,7 +397,6 @@
   <section class="section">
     <div class="container is-max-wide">
       <div class="has-text-centered">
-        <p class="section-kicker">Ablations</p>
         <h2 class="title is-3 section-title">Action-Space Comparison on WalkGrab</h2>
         <p class="section-lead">Under the same reward budget, only the coordinated latent-residual interface learns the contact-rich walk-grasp task.</p>
       </div>
