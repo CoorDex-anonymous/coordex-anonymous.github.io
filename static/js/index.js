@@ -132,10 +132,10 @@ $(document).ready(function() {
     }
 
 	// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
+    if (typeof bulmaCarousel !== 'undefined') { bulmaCarousel.attach('.carousel', options); }
 	
-    bulmaSlider.attach();
-    
+    if (typeof bulmaSlider !== 'undefined') { bulmaSlider.attach(); }
+
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
 

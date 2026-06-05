@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
   <meta name="title" content="CoorDex: Coordinating Body-Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation">
   <meta name="description" content="CoorDex learns coordinated latent residual control over body and dexterous hand priors, enabling high-DoF continuous dexterous loco-manipulation on a humanoid.">
@@ -11,7 +11,7 @@
   <meta name="author" content="Anonymous Author(s)">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="CoorDex">
@@ -37,56 +37,48 @@
   <meta name="citation_title" content="CoorDex: Coordinating Body-Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation">
   <meta name="citation_author" content="Anonymous Author(s)">
   <meta name="citation_publication_date" content="2026">
-  
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
   <title>CoorDex: Coordinating Body-Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation</title>
-  
+
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -122,7 +114,7 @@
     ]
   }
   </script>
-  
+
   <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
   {
@@ -133,64 +125,71 @@
     "logo": "https://coordex-anonymous.github.io/static/images/favicon.ico"
   }
   </script>
+
+  <!-- CoorDex custom styles -->
+  <style>
+    :root{
+      --accent:#2563eb;
+      --accent-soft:#eff4ff;
+      --ink:#1f2733;
+      --muted:#6b7280;
+    }
+    body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);}
+    .publication-title{letter-spacing:-.02em;line-height:1.14;}
+    .container.is-max-wide{max-width:1180px;margin:0 auto;}
+
+    /* media framing */
+    .media-frame{border-radius:14px;overflow:hidden;background:#000;
+      box-shadow:0 10px 34px rgba(16,24,40,.12);}
+    .media-frame img,.media-frame video{display:block;width:100%;height:auto;background:#000;}
+    .fig-caption{color:var(--muted);font-size:.96rem;line-height:1.6;
+      margin:1.1rem auto 0;max-width:1000px;text-align:justify;}
+    .fig-caption b{color:var(--ink);}
+
+    /* section headings */
+    .section-kicker{text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;
+      font-weight:700;color:var(--accent);margin-bottom:.45rem;}
+    .section-title{font-weight:800;letter-spacing:-.01em;}
+    .section-lead{color:var(--muted);max-width:760px;margin:.5rem auto 0;}
+
+    /* video grids */
+    .vgrid{display:grid;gap:1.3rem;align-items:start;}
+    .vgrid-2{grid-template-columns:repeat(2,1fr);}
+    .vgrid-3{grid-template-columns:repeat(3,1fr);}
+    .vgrid-4{grid-template-columns:repeat(4,1fr);}
+    @media(max-width:1023px){.vgrid-3,.vgrid-4{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:640px){.vgrid-2,.vgrid-3,.vgrid-4{grid-template-columns:1fr;}}
+    .vcard{display:flex;flex-direction:column;}
+    .vlabel{margin-top:.65rem;text-align:center;font-weight:650;font-size:1.02rem;}
+    .vsub{display:block;font-weight:500;color:var(--muted);font-size:.84rem;margin-top:.1rem;}
+
+    /* pills / badges */
+    .pill{display:inline-flex;align-items:center;gap:.4rem;padding:.32rem .85rem;
+      border-radius:999px;font-size:.8rem;font-weight:650;line-height:1;}
+    .pill-realtime{background:#ecfdf5;color:#059669;}
+    .pill-success{background:#ecfdf5;color:#059669;}
+    .pill-fail{background:#fef2f2;color:#dc2626;}
+    .pill-ours{background:var(--accent);color:#fff;}
+    .pill-base{background:#f3f4f6;color:#4b5563;}
+
+    /* emphasis / de-emphasis */
+    .vcard.ours .media-frame{box-shadow:0 0 0 3px var(--accent),0 10px 30px rgba(37,99,235,.28);}
+    .portrait-wrap{max-width:330px;margin:1.6rem auto 0;}
+
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.08),transparent);
+      max-width:1180px;margin:0 auto;}
+  </style>
 </head>
 <body>
-
 
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
+
+  <!-- Title -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -199,218 +198,246 @@
             <h1 class="title is-1 publication-title">CoorDex: Coordinating Body-Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">Anonymous Author(s)</span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/CoorDex_video_anonymous.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Humanoid loco-manipulation is often simplified as walking to an object, stopping to manipulate it, and then resuming locomotion. It also commonly relies on low-degree-of-freedom end effectors whose behavior is close to an open-close grasp primitive. We introduce <strong>CoorDex</strong>, a learning pipeline that converts high-dimensional body and dexterous hand control into coordinated latent residual control, enabling high-DoF dexterous loco-manipulation. Starting from simulated whole-body and hand demonstrations, CoorDex trains privileged motion-tracking teachers for the humanoid body and dexterous hand, distills them into proprioception-conditioned latent priors, and uses the frozen priors as the action space for downstream residual reinforcement learning. A <em>Coordinated Latent Residual Policy</em> composes these priors through shared task context and separate body-hand residual heads, preserving natural whole-body motion while improving finger-level contact accuracy. CoorDex enables a Unitree G1 humanoid with a 20-DoF Wuji hand to perform several high-DoF dexterous loco-manipulation skills, including non-stop bottle grasping and carrying, fridge-door opening, and cube pick-and-turn. Controlled ablations on the walk-grasp task show that direct joint-space PPO and unstructured latent prediction fail under the same reward budget, while the proposed latent-prior interface and coordinated residual structure make high-dimensional contact-rich loco-manipulation trainable.
-          </p>
+  <!-- Teaser image -->
+  <section class="hero">
+    <div class="container is-max-wide">
+      <div class="hero-body">
+        <div class="media-frame">
+          <img src="static/images/CoorDex_teaser_v1.png" alt="CoorDex performing dexterous loco-manipulation tasks">
         </div>
+        <p class="fig-caption">
+          <b>Dexterous loco-manipulation on the move.</b> CoorDex enables a humanoid equipped with high-DoF dexterous hands to perform continuous loco-manipulation tasks, including walk-grasp-carry, opening a fridge while stepping back, and walk-pick-turn.
+        </p>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+  <!-- Overview video -->
+  <section class="hero">
+    <div class="container is-max-wide">
+      <div class="hero-body" style="padding-top:0;">
+        <div class="media-frame">
+          <video id="overview-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="static/videos/CoorDex_video_anonymous_6M.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="fig-caption has-text-centered" style="text-align:center;">
+          Overview video &mdash; unmute for audio.
+        </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+  </section>
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3 section-title">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Humanoid loco-manipulation is often simplified as walking to an object, stopping to manipulate it, and then resuming locomotion. It also commonly relies on low-degree-of-freedom end effectors whose behavior is close to an open-close grasp primitive. We introduce <strong>CoorDex</strong>, a learning pipeline that converts high-dimensional body and dexterous hand control into coordinated latent residual control, enabling high-DoF dexterous loco-manipulation. Starting from simulated whole-body and hand demonstrations, CoorDex trains privileged motion-tracking teachers for the humanoid body and dexterous hand, distills them into proprioception-conditioned latent priors, and uses the frozen priors as the action space for downstream residual reinforcement learning. A <em>Coordinated Latent Residual Policy</em> composes these priors through shared task context and separate body-hand residual heads, preserving natural whole-body motion while improving finger-level contact accuracy. CoorDex enables a Unitree G1 humanoid with a 20-DoF Wuji hand to perform several high-DoF dexterous loco-manipulation skills, including non-stop bottle grasping and carrying, fridge-door opening, and cube pick-and-turn. Controlled ablations on the walk-grasp task show that direct joint-space PPO and unstructured latent prediction fail under the same reward budget, while the proposed latent-prior interface and coordinated residual structure make high-dimensional contact-rich loco-manipulation trainable.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
+  <!-- Method -->
+  <section class="section">
+    <div class="container is-max-wide">
+      <div class="has-text-centered">
+        <p class="section-kicker">Method</p>
+        <h2 class="title is-3 section-title">How CoorDex Works</h2>
+      </div>
+      <div class="media-frame" style="background:#fff;margin-top:1.6rem;box-shadow:0 10px 34px rgba(16,24,40,.10);">
+        <img src="static/images/Method_final.svg" alt="Overview of the CoorDex pipeline">
+      </div>
+      <p class="fig-caption">
+        <b>Overview of CoorDex.</b> Body and hand reference motions are tracked by privileged teachers and distilled into separate proprioception-conditioned latent priors. During downstream RL, a coordinated residual policy uses task context and prior means to predict body and hand latent residuals. The frozen decoders map corrected latents to joint-position targets for loco-manipulation.
+      </p>
+    </div>
+  </section>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+  <div class="divider"></div>
+
+  <!-- Real-world experiments -->
+  <section class="section">
+    <div class="container is-max-wide">
+      <div class="has-text-centered">
+        <p class="section-kicker">Real-World Deployment</p>
+        <h2 class="title is-3 section-title">Dexterous Loco-Manipulation on Hardware</h2>
+        <p class="section-lead">A Unitree G1 humanoid with 20-DoF Wuji dexterous hands, performing each task continuously without stopping.</p>
+        <div style="margin-top:1rem;">
+          <span class="pill pill-realtime"><i class="fas fa-stopwatch"></i>&nbsp;Played at real-time speed (1&times;)</span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
+      <!-- Two emphasized landscape tasks -->
+      <div class="vgrid vgrid-2" style="margin-top:2rem;">
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/WalkGrab_real.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">WalkGrab</div>
+        </div>
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/WalkPickTurn_real.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">WalkPickTurn</div>
+        </div>
+      </div>
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <!-- De-emphasized portrait task -->
+      <div class="portrait-wrap">
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/fridge_real.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">OpenFridge</div>
+        </div>
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
+  <div class="divider"></div>
 
+  <!-- Simulation -->
+  <section class="section">
+    <div class="container is-max-wide">
+      <div class="has-text-centered">
+        <p class="section-kicker">Simulation</p>
+        <h2 class="title is-3 section-title">Learned Skills in Simulation</h2>
+      </div>
 
-<!--BibTex citation -->
+      <!-- Successful rollouts -->
+      <div class="has-text-centered" style="margin-top:1.4rem;">
+        <span class="pill pill-success"><i class="fas fa-check"></i>&nbsp;Successful rollouts</span>
+      </div>
+      <div class="vgrid vgrid-3" style="margin-top:1.1rem;">
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/sim/fridge_sim.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">OpenFridge</div>
+        </div>
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/sim/walkgrab_sim.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">WalkGrab</div>
+        </div>
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/sim/walkpickturn_sim.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">WalkPickTurn</div>
+        </div>
+      </div>
+
+      <!-- Failure cases -->
+      <div class="has-text-centered" style="margin-top:2.4rem;">
+        <span class="pill pill-fail"><i class="fas fa-xmark"></i>&nbsp;Representative failure cases</span>
+      </div>
+      <div class="vgrid vgrid-2" style="margin-top:1.1rem;max-width:760px;margin-left:auto;margin-right:auto;">
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/sim/fridge_fail.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">OpenFridge <span class="vsub">failure</span></div>
+        </div>
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/sim/walkgrab_fail.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">WalkGrab <span class="vsub">failure</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Baselines / ablations -->
+  <section class="section">
+    <div class="container is-max-wide">
+      <div class="has-text-centered">
+        <p class="section-kicker">Ablations</p>
+        <h2 class="title is-3 section-title">Action-Space Comparison on WalkGrab</h2>
+        <p class="section-lead">Under the same reward budget, only the coordinated latent-residual interface learns the contact-rich walk-grasp task.</p>
+      </div>
+      <div class="vgrid vgrid-4" style="margin-top:1.8rem;">
+        <div class="vcard ours">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/sim/walkgrab_sim.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel">
+            <span class="pill pill-ours"><i class="fas fa-star"></i>&nbsp;Ours</span>
+            <span class="vsub">Coordinated Latent Residual</span>
+          </div>
+        </div>
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/baseline/All_joint_space.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel"><span class="pill pill-base">Baseline</span><span class="vsub">All Joint Space</span></div>
+        </div>
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/baseline/bodyprior_handjoint.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel"><span class="pill pill-base">Baseline</span><span class="vsub">Body Prior + Hand Joint Space</span></div>
+        </div>
+        <div class="vcard">
+          <div class="media-frame">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/baseline/sharelatent.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vlabel"><span class="pill pill-base">Baseline</span><span class="vsub">Monolithic Latent Residual</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- BibTeX citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
+        <h2 class="title section-title">BibTeX</h2>
         <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
           <i class="fas fa-copy"></i>
           <span class="copy-text">Copy</span>
@@ -422,33 +449,22 @@
   year={2026}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
-
+  </section>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
